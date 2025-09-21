@@ -10,7 +10,7 @@
     <link rel="preload" href="hero.webp" as="image" type="image/webp" media="(min-width: 1280px)" />
     <link rel="preload" href="hero.webp" as="image" type="image/webp"
         media="(min-width: 768px) and (max-width: 1279px)" />
-    <link rel="preload" href="hero.webp" as="image" type="image/webp" media="(max-width: 767px)" />
+    <link rel="preload" href="mobile.webp" as="image" type="image/webp" media="(max-width: 767px)" />
     <style>
         @font-face {
             font-family: 'Plus Jakarta Sans';
@@ -3882,6 +3882,8 @@
             /* Fixed: Hero headline and stats for mobile */
             .hero {
                 padding: 100px 0 60px;
+                background: url('mobile.webp') no-repeat center center;
+        background-size: cover;
             }
 
             .hero-container {
@@ -4932,7 +4934,7 @@
         }
     </style>
 
-    <!-- Stats Section -->
+    <!-- Stats Section 
     <section class="stats section-dark">
         <div class="blur-effect blur-primary" data-position="top: 50%; left: 20%; transform: translateY(-50%);"></div>
         <div class="blur-effect blur-accent" data-position="top: 70%; right: 10%;"></div>
@@ -4948,8 +4950,8 @@
                     <div class="stats-label">ROI Increase</div>
                     <p class="stats-description">Average return on investment improvement within 6 months for our
                         digital
-                        marketing clients</p>
-                    <!-- Added badge section with favicon -->
+                        marketing clients</p> -->
+                    <!-- Added badge section with favicon 
                     <div class="stats-badges">
                         <div class="badge-item">
                             <img src="https://www.google.com/favicon.ico" alt="Google" class="badge-icon">
@@ -4961,8 +4963,8 @@
                     <div class="stats-value">95%</div>
                     <div class="stats-label">Client Satisfaction</div>
                     <p class="stats-description">Client retention rate with projects delivered on time and exceeding
-                        expectations</p>
-                    <!-- Added badge section with favicons -->
+                        expectations</p>-->
+                    <!-- Added badge section with favicons 
                     <div class="stats-badges">
                         <div class="badge-item">
                             <img src="https://www.google.com/favicon.ico" alt="Google" class="badge-icon">
@@ -4978,8 +4980,8 @@
                     <div class="stats-value">2.3M+</div>
                     <div class="stats-label">Video Views</div>
                     <p class="stats-description">Total video views generated for our clients across all platforms and
-                        campaigns</p>
-                    <!-- Added badge section with favicons -->
+                        campaigns</p> -->
+                    <!-- Added badge section with favicons 
                     <div class="stats-badges">
                         <div class="badge-item">
                             <img src="https://www.facebook.com/favicon.ico" alt="Meta" class="badge-icon">
@@ -4993,7 +4995,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section id="cases" class="products-showcase section-light">
         <div class="container">
@@ -5001,62 +5003,143 @@
                 <div class="section-tag">Success Stories</div>
                 <h2 class="section-title">They grew thanks to <span>our approach</span></h2>
                 <p class="section-description">Real results for real businesses</p>
+    
+                <!-- Portfolio Filter Tabs -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn" data-filter="all">All Projects</button>
+                    <button class="filter-btn active" data-filter="website">Website Development</button>
+                    <button class="filter-btn" data-filter="video">Video Production</button>
+                    <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+                </div>
             </div>
-
+    
             <div class="showcase-grid">
-                <!-- First Row: Card 1 content on left, Card 1 image on right -->
-                <div class="showcase-row">
-                    <!-- Card 1 Content -->
+                <!-- Website Development Projects -->
+                <!-- Website Project 1 -->
+                <div class="showcase-row" data-category="website">
                     <div class="showcase-card" data-bg-color="#f3f0e9">
                         <div class="card-content">
                             <div class="card-tag">Website Development</div>
                             <h3 class="card-title">KustomSigns<br>OK</h3>
-                            <p class="card-subtitle">From outdated website to modern responsive platform that converts
-                            </p>
+                            <p class="card-subtitle">From outdated website to modern responsive platform that converts</p>
                             <a href="https://www.kustomsignsok.com/index.html#home" target="_blank"
-                                class="card-button first">View Website &nbsp;
-                                →</a>
+                                class="card-button first">View Website &nbsp; →</a>
                         </div>
                     </div>
-
-                    <!-- Card 1 Image -->
                     <div class="showcase-image-container">
                         <div class="museum-frame">
                             <div class="frame-mat">
-                                <img src="images/kustom.png" alt="TechStart Co Website" class="product-img">
+                                <img src="images/website1.png" alt="KustomSigns Website" class="product-img">
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Second Row: Card 2 image on left, Card 2 content on right -->
-                <div class="showcase-row">
-                    <!-- Card 2 Image -->
+    
+                <!-- Website Project 2 -->
+                <div class="showcase-row" data-category="website">
                     <div class="showcase-image-container">
                         <div class="museum-frame">
                             <div class="frame-mat">
-                                <img src="images/gouri.png" alt="Bloom Cafe Video Production" class="product-img">
+                                <img src="images/website2.png" alt="Keto cookies" class="product-img">
                             </div>
                         </div>
                     </div>
-
-                    <!-- Card 2 Content -->
+                    <div class="showcase-card" data-bg-color="#e8f4f8">
+                        <div class="card-content">
+                            <div class="card-tag">Website Development</div>
+                            <h3 class="card-title">Keto<br>Cookies</h3>
+                            <p class="card-subtitle">Complete cookies website with online booking system and menu
+                                showcase</p>
+                            <a href="https://vulcan-byte-alt.github.io/Keto/" target="_blank" class="card-button first">View
+                                Website &nbsp; →</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Website Project 3 -->
+                <div class="showcase-wide-row" data-category="website">
+                    <div class="showcase-card wide dark" data-bg-color="#2a2d3a">
+                        <div class="card-content">
+                            <div class="card-tag">Website Development</div>
+                            <h3 class="card-title">Data Cabboose</h3>
+                            <p class="card-subtitle">Canadian Cloud Company website with modern, unique and sleek design</p>
+                            <a href="https://datacaboose.com/" class="card-button first">View Website &nbsp; →</a>
+                        </div>
+                        <div class="card-image">
+                            <div class="museum-frame dark-frame">
+                                <div class="frame-mat dark-mat">
+                                    <img src="images/website3.png" alt="DataCaboose" class="product-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Video Production Projects -->
+                <!-- Video Project 1 -->
+                <div class="showcase-row" data-category="video">
+                    <div class="showcase-image-container">
+                        <div class="museum-frame">
+                            <div class="frame-mat">
+                                <img src="images/short1.png" alt="Gouri De Ing Vanne Video" class="product-img">
+                            </div>
+                        </div>
+                    </div>
                     <div class="showcase-card" data-bg-color="#fadadd">
                         <div class="card-content">
                             <div class="card-tag">Video Production</div>
                             <h3 class="card-title">Gouri De Ing Vanne</h3>
-                            <p class="card-subtitle">Meaningful storytelling that sparked 2.3M views and built a
-                                movement</p>
+                            <p class="card-subtitle">Meaningful storytelling that sparked 2.3M views and built a movement
+                            </p>
                             <a href="https://youtu.be/23iOruwFS3A?si=Gpir1wSfiL-e1wNI" target="_blank"
-                                class="card-button first">Watch
-                                Film &nbsp; →</a>
-                            <!--<a href="/case-studies/bloom-cafe-storytelling" class="card-button second">View Case Study &nbsp; →</a>-->
+                                class="card-button first">Watch Film &nbsp; →</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Third Row: Wide Card -->
-                <div class="showcase-wide-row">
+    
+                <!-- Video Project 2 -->
+                <div class="showcase-row" data-category="video">
+                    <div class="showcase-card" data-bg-color="#f0e6ff">
+                        <div class="card-content">
+                            <div class="card-tag">Video Production</div>
+                            <h3 class="card-title">Gender<br>Reveal</h3>
+                            <p class="card-subtitle">Heartwarming gender reveal compilation featuring Karthik Surya that celebrated family moments across 500K+ views</p>
+                            <a href="https://youtu.be/Zb1v1vBjbUM?si=hBbYZlgwm6qSksu3   " target="_blank"
+                                class="card-button first">Watch Video &nbsp; →</a>
+                        </div>
+                    </div>
+                    <div class="showcase-image-container">
+                        <div class="museum-frame">
+                            <div class="frame-mat">
+                                <img src="images/short2.jpg" alt="Otentik Wellness Video" class="product-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Video Project 3 -->
+                <div class="showcase-wide-row" data-category="video">
+                    <div class="showcase-card wide dark" data-bg-color="#1a1a2e">
+                        <div class="card-image">
+                            <div class="museum-frame dark-frame">
+                                <div class="frame-mat dark-mat">
+                                    <img src="images/short3.jpg" alt="De Doncker Video Series"
+                                        class="product-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tag">Video Production</div>
+                            <h3 class="card-title">Good Mornings</h3>
+                            <p class="card-subtitle">Satirical workplace comedy showcasing sharp editing and social commentary that resonated with professional audiences</p>
+                            <a href="https://www.youtube.com/watch?v=oOmmpCjs1uU" target="_blank" class="card-button first">Watch Series &nbsp; →</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Digital Marketing Projects -->
+                <!-- Marketing Project 1 -->
+                <div class="showcase-wide-row" data-category="marketing">
                     <div class="showcase-card wide dark" data-bg-color="#0f1322">
                         <div class="card-content">
                             <div class="card-tag">Digital Marketing Campaign</div>
@@ -5064,7 +5147,6 @@
                             <p class="card-subtitle">+350% ROI in 4 months through strategic Meta & Google Ads campaigns
                                 with conversion optimization</p>
                             <a href="#" class="card-button first">View Results &nbsp; →</a>
-                            <!--<a href="#" class="card-button second">View Case Study &nbsp; →</a>-->
                         </div>
                         <div class="card-image">
                             <div class="museum-frame dark-frame">
@@ -5075,13 +5157,194 @@
                         </div>
                     </div>
                 </div>
+    
+                <!-- Marketing Project 2 -->
+                <div class="showcase-row" data-category="marketing">
+                    <div class="showcase-card" data-bg-color="#fff2e6">
+                        <div class="card-content">
+                            <div class="card-tag">Performance Marketing</div>
+                            <h3 class="card-title">Van den Driessche<br>Growth Campaign</h3>
+                            <p class="card-subtitle">Local business expansion through targeted Facebook and Google Ads,
+                                achieving 280% increase in qualified leads</p>
+                            <a href="#" target="_blank" class="card-button first">View Campaign &nbsp; →</a>
+                        </div>
+                    </div>
+                    <div class="showcase-image-container">
+                        <div class="museum-frame">
+                            <div class="frame-mat">
+                                <img src="images/vandendriessche-campaign.png" alt="Van den Driessche Campaign"
+                                    class="product-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Marketing Project 3 -->
+                <div class="showcase-row" data-category="marketing">
+                    <div class="showcase-image-container">
+                        <div class="museum-frame">
+                            <div class="frame-mat">
+                                <img src="images/conell-campaign.png" alt="Conell BV Marketing Campaign"
+                                    class="product-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-card" data-bg-color="#e6f7ff">
+                        <div class="card-content">
+                            <div class="card-tag">Digital Marketing</div>
+                            <h3 class="card-title">Conell BV<br>B2B Campaign</h3>
+                            <p class="card-subtitle">LinkedIn and Google Ads strategy for B2B lead generation, resulting in
+                                45% cost-per-lead reduction</p>
+                            <a href="#" target="_blank" class="card-button first">View Results &nbsp; →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
+    
             <div class="view-all-link">
                 <a href="#" class="btn btn-secondary">View All Projects <i class="fas fa-arrow-right btn-icon"></i></a>
             </div>
         </div>
     </section>
+    
+    <style>
+        /* Portfolio Filter Styles */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+    
+        .filter-btn {
+            padding: 12px 24px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            color: #64748b;
+            border-radius: 30px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+    
+        .filter-btn:hover {
+            border-color: #4361ee;
+            color: #4361ee;
+            transform: translateY(-2px);
+        }
+    
+        .filter-btn.active {
+            background: linear-gradient(135deg, #4361ee 0%, #6366f1 100%);
+            color: white;
+            border-color: #4361ee;
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
+        }
+    
+        /* Hide/Show animation for filtered items */
+        .showcase-row {
+            transition: all 0.5s ease;
+            opacity: 1;
+            transform: translateY(0);
+            display: flex;
+            position: relative;
+        }
+    
+        .showcase-row.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+            position: absolute;
+            left: -9999px;
+            display: none;
+        }
+    
+        .showcase-wide-row {
+            transition: all 0.5s ease;
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+            position: relative;
+        }
+    
+        .showcase-wide-row.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+            position: absolute;
+            left: -9999px;
+            display: none;
+        }
+    
+        /* Responsive filter buttons */
+        @media (max-width: 768px) {
+            .portfolio-filters {
+                gap: 12px;
+                margin-bottom: 40px;
+            }
+    
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .portfolio-filters {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                max-width: 300px;
+                margin: 30px auto 40px;
+            }
+    
+            .filter-btn {
+                text-align: center;
+                padding: 10px 12px;
+            }
+        }
+    </style>
+    
+    <script>
+        // Portfolio Filter Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('[data-category]');
+
+            // Initialize - hide all except website projects
+            portfolioItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (category !== 'website') {
+                    item.classList.add('hidden');
+                }
+            });
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter portfolio items
+                    portfolioItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+
+                        if (filter === 'all' || category === filter) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 
     <!-- Blog Section -->
     <section id="blog" class="blog section-dark">
@@ -5276,29 +5539,27 @@
                 <div class="team-card">
                     <div class="team-card-header">
                         <div class="team-avatar">
-                            <img src="images/a" alt="Akshay - Editor">
+                            <img src="images/akshay.png" alt="Akshay - Editor">
                         </div>
                     </div>
                     <div class="team-card-content">
                         <h3 class="team-name">Akshay</h3>
                         <div class="team-role">Editor</div>
                         <div class="team-social">
-                            <a href="#" class="social-icon" aria-label="LinkedIn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <a href="https://youtube.com/@funtasticstudioyt?si=dQNTgbxIVbP8apDK" class="social-icon" target="_blank" aria-label="YouTube">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
                                     <path
-                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                    </path>
-                                    <rect x="2" y="9" width="4" height="12"></rect>
-                                    <circle cx="4" cy="4" r="2"></circle>
+                                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                                    <polygon points="9.75,15.02 15.5,11.75 9.75,8.48" />
                                 </svg>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Twitter">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z">
-                                    </path>
+                            <a href="https://instagram.com/fstudio2.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" aria-label="Instagram">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                 </svg>
                             </a>
                         </div>
@@ -5365,7 +5626,7 @@
                         <h3 class="team-name">Ambady</h3>
                         <div class="team-role">Client Executive & Videographer</div>
                         <div class="team-social">
-                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/ambady-subhash-a00682289" class="social-icon" aria-label="LinkedIn">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -5375,13 +5636,12 @@
                                     <circle cx="4" cy="4" r="2"></circle>
                                 </svg>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Email">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <a href="https://www.youtube.com/@motogaminggyt" class="social-icon" aria-label="YouTube">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
                                     <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                    </path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                                    <polygon points="9.75,15.02 15.5,11.75 9.75,8.48" />
                                 </svg>
                             </a>
                         </div>
@@ -5629,7 +5889,7 @@
         }
     </style>
 
-    <!-- Process Section -->
+    <!-- Process Section 
     <section class="process section-dark">
         <div class="blur-effect blur-primary" style="top: 20%; left: 10%;"></div>
         <div class="blur-effect blur-accent" style="top: 60%; right: 15%;"></div>
@@ -5641,8 +5901,8 @@
                 </p>
             </div>
 
-            <div class="process-grid">
-                <!-- Process Step 1 -->
+            <div class="process-grid"> -->
+                <!-- Process Step 1 
                 <div class="process-card" style="background-image: url('images/how1.png');">
                     <div class="process-overlay">
                         <div class="process-header">
@@ -5664,9 +5924,9 @@
 
                         <div class="process-duration">2-3 Days</div>
                     </div>
-                </div>
+                </div> -->
 
-                <!-- Process Step 2 -->
+                <!-- Process Step 2 
                 <div class="process-card" style="background-image: url('images/how2.png');">
                     <div class="process-overlay">
                         <div class="process-header">
@@ -5689,9 +5949,9 @@
 
                         <div class="process-duration">1-2 Weeks</div>
                     </div>
-                </div>
+                </div> -->
 
-                <!-- Process Step 3 -->
+                <!-- Process Step 3 
                 <div class="process-card" style="background-image: url('images/how3.png');">
                     <div class="process-overlay">
                         <div class="process-header">
@@ -5891,7 +6151,7 @@
                 font-size: 20px;
             }
         }
-    </style>
+    </style> -->
 
 
 
