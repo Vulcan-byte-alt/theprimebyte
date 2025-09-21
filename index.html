@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jitware | Strategische Online Groei</title>
+    <title>The Prime Byte</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="preload" href="hero.webp" as="image" type="image/webp" media="(min-width: 1280px)" />
     <link rel="preload" href="hero.webp" as="image" type="image/webp"
@@ -4445,7 +4446,7 @@
                 </ul>
 
                 <div class="nav-buttons">
-                    <button class="btn btn-primary">Consult Us</button>
+                    <a href="#contact" class="btn btn-primary">Consult Us</a>
                 </div>
                 <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
                     <i class="fas fa-bars"></i>
@@ -4730,7 +4731,7 @@
                     just
                     deliver services — they deliver impact that transforms businesses.</p>
             </div>
-
+    
             <!-- Main Testimonial (Full Width) -->
             <div class="testimonial-featured">
                 <div class="testimonial-quote-mark">
@@ -4762,10 +4763,14 @@
                     <div class="author-info">
                         <div class="author-name">Sarah M.</div>
                         <div class="author-role">CEO, TechStart Co.</div>
+                        <div class="platform-badge">
+                            <img src="https://www.google.com/favicon.ico" alt="Google Reviews" class="platform-icon">
+                            <span>Google Reviews</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
+    
             <!-- Sub Testimonials -->
             <div class="sub-testimonials">
                 <div class="sub-testimonial-item">
@@ -4787,10 +4792,14 @@
                         <div class="sub-author-info">
                             <div class="sub-author-name">Michael R.</div>
                             <div class="sub-author-role">Founder, Creative Studio</div>
+                            <div class="platform-badge">
+                                <img src="https://www.freelancer.com/favicon.ico" alt="Freelancer" class="platform-icon">
+                                <span>Freelancer</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="sub-testimonial-item">
                     <div class="sub-testimonial-quote">
                         "Their video content and digital campaigns increased our social engagement by 400%. The team
@@ -4809,10 +4818,14 @@
                         <div class="sub-author-info">
                             <div class="sub-author-name">Emma K.</div>
                             <div class="sub-author-role">Marketing Director, Urban Fitness</div>
+                            <div class="platform-badge">
+                                <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" class="platform-icon">
+                                <span>LinkedIn</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="sub-testimonial-item">
                     <div class="sub-testimonial-quote">
                         "Professional, innovative, and results-driven. Our brand reach tripled within months of working
@@ -4832,11 +4845,15 @@
                         <div class="sub-author-info">
                             <div class="sub-author-name">David L.</div>
                             <div class="sub-author-role">CEO, EcoSolutions</div>
+                            <div class="platform-badge">
+                                <img src="images/clutch.webp" alt="Clutch" class="platform-icon">
+                                <span>Clutch</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+    
             <!-- Modern Metrics Section -->
             <div class="metrics-section">
                 <div class="metrics-container">
@@ -4851,9 +4868,9 @@
                         </div>
                         <div class="metric-label">Average client rating</div>
                     </div>
-
+    
                     <div class="metric-divider"></div>
-
+    
                     <div class="metric-card">
                         <div class="metric-value">25+</div>
                         <div class="icon-container">
@@ -4861,9 +4878,9 @@
                         </div>
                         <div class="metric-label">Happy clients</div>
                     </div>
-
+    
                     <div class="metric-divider"></div>
-
+    
                     <div class="metric-card">
                         <div class="metric-value">100%</div>
                         <div class="icon-container">
@@ -4875,6 +4892,45 @@
             </div>
         </div>
     </section>
+    
+    <style>
+        /* Platform Badge Styles */
+        .platform-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: fit-content;
+        }
+    
+        .platform-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            object-fit: contain;
+        }
+    
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .platform-badge {
+                font-size: 11px;
+                padding: 3px 6px;
+                gap: 4px;
+            }
+    
+            .platform-icon {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    </style>
 
     <!-- Stats Section -->
     <section class="stats section-dark">
@@ -5008,7 +5064,7 @@
                             <p class="card-subtitle">+350% ROI in 4 months through strategic Meta & Google Ads campaigns
                                 with conversion optimization</p>
                             <a href="#" class="card-button first">View Results &nbsp; →</a>
-                            <a href="#" class="card-button second">View Case Study &nbsp; →</a>
+                            <!--<a href="#" class="card-button second">View Case Study &nbsp; →</a>-->
                         </div>
                         <div class="card-image">
                             <div class="museum-frame dark-frame">
