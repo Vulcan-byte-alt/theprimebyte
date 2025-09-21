@@ -675,6 +675,8 @@
             transform: translateY(0);
             opacity: 1;
             visibility: visible;
+            top: 80px;
+            height: calc(100vh - 80px);
         }
 
         .mobile-menu .nav-links {
@@ -4226,20 +4228,20 @@
                 font-size: 0.75rem;
             }
 
-.dashboard-chart {
-        height: 180px;
-        padding: 3px;
-    }
+            .dashboard-chart {
+                height: 180px;
+                padding: 3px;
+            }
 
             .dashboard-metrics {
                 grid-template-columns: 1fr;
             }
 
             .dashboard-metrics .metric-card {
-        padding: 10px 6px;
-    }
+                padding: 10px 6px;
+            }
 
-    
+
 
             .dashboard-metrics .metric-card:nth-child(odd) {
                 border-right: none;
@@ -4299,12 +4301,12 @@
             }
 
             .metric-value {
-        font-size: 1rem;
-    }
+                font-size: 1rem;
+            }
 
-     .metric-label {
-        font-size: 0.65rem;
-    }
+            .metric-label {
+                font-size: 0.65rem;
+            }
 
             .metrics-section .metric-value {
                 font-size: 36px;
@@ -4435,10 +4437,10 @@
                 <!-- Centered Nav Links -->
                 <ul class="nav-links">
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#revi">Reviews</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#cases">Portfolio</a></li>
                     <li><a href="#blog">Blog</a></li>
+                    <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
 
@@ -4455,9 +4457,10 @@
         <div class="mobile-menu">
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#cases">Portfolio</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-buttons">
@@ -4717,7 +4720,7 @@
     </section>
 
     <!-- Redesigned Testimonial Section -->
-    <section class="testimonial section-dark">
+    <section id="testimonials" class="testimonial section-dark">
         <div class="blob-shape testimonial-blob"></div>
         <div class="container">
             <div class="section-header">
@@ -5112,7 +5115,7 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team-section section-light">
+    <section id="team" class="team-section section-light">
         <div class="container">
             <div class="section-header text-center">
                 <div class="section-tag">Our Team</div>
