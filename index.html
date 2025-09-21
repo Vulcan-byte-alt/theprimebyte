@@ -563,11 +563,13 @@
         }
 
         .logo img {
-  height: 50px;   /* Adjust: 40px = h-10, 48px = h-12 */
-  width: auto;
-  object-fit: contain;
-  display: block; /* removes inline-gap issues */
-}
+            height: 50px;
+            /* Adjust: 40px = h-10, 48px = h-12 */
+            width: auto;
+            object-fit: contain;
+            display: block;
+            /* removes inline-gap issues */
+        }
 
 
         .logo-highlight {
@@ -1446,7 +1448,7 @@
             left: 0;
             width: 100%;
             height: 8px;
-           
+
             background-size: 100% 100%;
         }
 
@@ -2264,7 +2266,7 @@
             background-size: 100% 100%;
         }
 
-        
+
 
         /* AI Features Grid */
         .ai-features-grid {
@@ -3542,11 +3544,13 @@
             position: relative;
         }
 
-        .footer-logo img{
-            height: 80px;   /* Adjust: 40px = h-10, 48px = h-12 */
-  width: auto;
-  object-fit: contain;
-  display: block; /* removes inline-gap issues */
+        .footer-logo img {
+            height: 80px;
+            /* Adjust: 40px = h-10, 48px = h-12 */
+            width: auto;
+            object-fit: contain;
+            display: block;
+            /* removes inline-gap issues */
         }
 
         .footer-logo-highlight {
@@ -3603,18 +3607,18 @@
         }
 
         .footer-link a {
-                color: var(--text-muted-light);
-    text-decoration: none;
-    transition: all var(--transition-fast);
-    display: inline-flex;
-    align-items: center;
-    font-size: var(--font-size-md);
-    position: relative;
-    padding-left: 0;
-    flex-direction: row-reverse;
+            color: var(--text-muted-light);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            font-size: var(--font-size-md);
+            position: relative;
+            padding-left: 0;
+            flex-direction: row-reverse;
         }
 
-        
+
 
         .footer-link a:hover {
             color: var(--primary-light);
@@ -3915,31 +3919,54 @@
 
             /* Fixed: Dashboard for mobile */
             .dashboard {
-                max-width: 90%;
-                overflow: hidden;
+                max-width: 100%;
+                margin: 0 auto;
+                width: 100%;
             }
 
             .dashboard-chart {
                 height: 200px;
+                padding: 5px;
+            }
+
+            .dashboard-chart video {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+                border-radius: 8px;
             }
 
             .dashboard-metrics {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                gap: 0;
+                width: 100%;
             }
 
             .dashboard-metrics .metric-card {
-                border-right: none;
+                border-right: 1px solid rgba(255, 255, 255, 0.05);
                 border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                padding: 12px 8px;
             }
 
-            .dashboard-metrics .metric-card:nth-child(odd) {
-                border-right: 1px solid rgba(255, 255, 255, 0.05);
+
+
+            .dashboard-metrics .metric-card:nth-child(2n) {
+                border-right: none;
             }
 
             .dashboard-metrics .metric-card:nth-child(3),
             .dashboard-metrics .metric-card:nth-child(4) {
                 border-bottom: none;
+            }
+
+            .metric-label {
+                font-size: 0.7rem;
+                margin-top: 8px;
+            }
+
+            .metric-value {
+                font-size: 1.1rem;
             }
 
             /* Fixed: Footer for mobile */
@@ -4199,13 +4226,20 @@
                 font-size: 0.75rem;
             }
 
-            .dashboard-chart {
-                height: 180px;
-            }
+.dashboard-chart {
+        height: 180px;
+        padding: 3px;
+    }
 
             .dashboard-metrics {
                 grid-template-columns: 1fr;
             }
+
+            .dashboard-metrics .metric-card {
+        padding: 10px 6px;
+    }
+
+    
 
             .dashboard-metrics .metric-card:nth-child(odd) {
                 border-right: none;
@@ -4263,6 +4297,14 @@
             .metric-card {
                 padding: 0 15px;
             }
+
+            .metric-value {
+        font-size: 1rem;
+    }
+
+     .metric-label {
+        font-size: 0.65rem;
+    }
 
             .metrics-section .metric-value {
                 font-size: 36px;
@@ -4377,139 +4419,140 @@
 </head>
 
 <body>
-<!-- Noise Overlay -->
-<div class="noise-overlay"></div>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
 
-<!-- Header with Fixed Navigation Alignment -->
-<header class="header" id="header">
-    <div class="container" style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
-        <nav class="navbar">
-            <a href="#" class="logo flex items-center">
-                <img src="images/logo.jpg" alt="The PrimeByte" />
-            </a>
+    <!-- Header with Fixed Navigation Alignment -->
+    <header class="header" id="header">
+        <div class="container" style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+            <nav class="navbar">
+                <a href="#" class="logo flex items-center">
+                    <img src="images/logo.jpg" alt="The PrimeByte" />
+                </a>
 
 
 
-            <!-- Centered Nav Links -->
+                <!-- Centered Nav Links -->
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#revi">Reviews</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <button class="btn btn-primary">Consult Us</button>
+                </div>
+                <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#revi">Reviews</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-
             <div class="nav-buttons">
-                <button class="btn btn-primary">Consult Us</button>
-            </div>
-            <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times"></i>
-            </button>
-        </nav>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="nav-buttons">
-            <button class="btn btn-primary">Free Consultation</button>
-        </div>
-    </div>
-</header>
-
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-blob-1"></div>
-    <div class="hero-blob-2"></div>
-    
-    <div class="hero-container">
-        <!-- Headline -->
-        <div class="hero-headline">
-            <h1>Every<span> byte</span> counts</h1>
-            <p>We blend creativity, technology, and strategy to unlock your brand's true potential through innovative
-            digital marketing solutions.</p>
-
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Get Free Strategy Session</a>
-                <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
+                <button class="btn btn-primary">Free Consultation</button>
             </div>
         </div>
+    </header>
 
-        <!-- Stats -->
-        <div class="hero-stats">
-            <div class="stat">
-                <span class="stat-number">+350%</span>
-                <span class="stat-label">ROI Increase</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">4.9/5</span>
-                <span class="stat-label">Client Rating</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">25+</span>
-                <span class="stat-label">Happy Clients</span>
-            </div>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-blob-1"></div>
+        <div class="hero-blob-2"></div>
 
-        <!-- Dashboard - Improved version with video instead of graph -->
-        <div class="dashboard">
-            <div class="dashboard-header">
-                <div class="dashboard-title">Client Success Stories</div>
+        <div class="hero-container">
+            <!-- Headline -->
+            <div class="hero-headline">
+                <h1>Every<span> byte</span> counts</h1>
+                <p>We blend creativity, technology, and strategy to unlock your brand's true potential through
+                    innovative
+                    digital marketing solutions.</p>
+
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get Free Strategy Session</a>
+                    <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
+                </div>
             </div>
 
-            <div class="dashboard-chart">
-                <video autoplay muted loop playsinline
-                    style="width: calc(100% - 20px); height: 280px; object-fit: cover; border-radius: 12px; display: block; background: #1e293b;">
-                    <source src="hero.mp4" type="video/mp4">
-                    <div
-                        style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; background: #1e293b; border-radius: 12px;">
-                        Video placeholder - Success Stories showcase
+            <!-- Stats -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">+350%</span>
+                    <span class="stat-label">ROI Increase</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.9/5</span>
+                    <span class="stat-label">Client Rating</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
+
+            <!-- Dashboard - Improved version with video instead of graph -->
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">Client Success Stories</div>
+                </div>
+
+                <div class="dashboard-chart">
+                    <video autoplay muted loop playsinline
+                        style="width: calc(100% - 20px); height: 280px; object-fit: cover; border-radius: 12px; display: block; background: #1e293b;">
+                        <source src="hero.mp4" type="video/mp4">
+                        <div
+                            style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; background: #1e293b; border-radius: 12px;">
+                            Video placeholder - Success Stories showcase
+                        </div>
+                    </video>
+                </div>
+
+                <!-- Key Metrics Cards -->
+                <div class="dashboard-metrics">
+                    <div class="metric-card">
+                        <div class="metric-label">Website Conversions</div>
+                        <div class="metric-value">+285%</div>
                     </div>
-                </video>
-            </div>
 
-            <!-- Key Metrics Cards -->
-            <div class="dashboard-metrics">
-                <div class="metric-card">
-                    <div class="metric-label">Website Conversions</div>
-                    <div class="metric-value">+285%</div>
+                    <div class="metric-card">
+                        <div class="metric-label">Social Engagement</div>
+                        <div class="metric-value">+420%</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">Video Views</div>
+                        <div class="metric-value">2.3M+</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-label">Brand Reach</div>
+                        <div class="metric-value">+195%</div>
+                    </div>
                 </div>
 
-                <div class="metric-card">
-                    <div class="metric-label">Social Engagement</div>
-                    <div class="metric-value">+420%</div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-label">Video Views</div>
-                    <div class="metric-value">2.3M+</div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-label">Brand Reach</div>
-                    <div class="metric-value">+195%</div>
-                </div>
-            </div>
-
-            <div class="dashboard-footer">
-                <div>Digital experiences that inspire, engage & drive results</div>
-                <div class="result">
-                    <div class="result-value">∞</div>
-                    <div class="result-label">possibilities ahead</div>
+                <div class="dashboard-footer">
+                    <div>Digital experiences that inspire, engage & drive results</div>
+                    <div class="result">
+                        <div class="result-value">∞</div>
+                        <div class="result-label">possibilities ahead</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -4546,9 +4589,10 @@
             <div class="section-header">
                 <div class="section-tag">Our Services</div>
                 <h2 class="section-title">What we <span>create</span></h2>
-                <p class="section-description">Everything you need to unlock your brand's true potential, under one roof</p>
+                <p class="section-description">Everything you need to unlock your brand's true potential, under one roof
+                </p>
             </div>
-    
+
             <div class="expertise-grid">
                 <!-- Card 1: Website Design & Development -->
                 <div class="expertise-card" data-bg-image="images/website.png">
@@ -4559,10 +4603,11 @@
                             </div>
                             <h3>Website Design & Development</h3>
                         </div>
-    
-                        <p class="card-description">Clean, modern, and responsive websites built with precision. We create
+
+                        <p class="card-description">Clean, modern, and responsive websites built with precision. We
+                            create
                             digital experiences that convert visitors into customers.</p>
-    
+
                         <ul class="feature-list">
                             <li>
                                 <i class="fas fa-check-circle"></i>
@@ -4577,10 +4622,10 @@
                                 <span>Performance optimization</span>
                             </li>
                         </ul>
-    
+
                         <div class="card-footer">
                             <a href="#" class="card-link">View Projects <i class="fas fa-arrow-right"></i></a>
-    
+
                             <div class="stat-highlight">
                                 <div class="stat-value" style="color: #4361ee; font-weight: 700;">95%</div>
                                 <div class="stat-label">Client satisfaction</div>
@@ -4588,7 +4633,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Card 2: Creative Design & Video Production -->
                 <div class="expertise-card" data-bg-image="images/video.png">
                     <div class="card-content">
@@ -4598,10 +4643,11 @@
                             </div>
                             <h3>Creative Design & Video Production</h3>
                         </div>
-    
-                        <p class="card-description">Eye-catching graphics, visuals, and campaigns that leave a mark. From
+
+                        <p class="card-description">Eye-catching graphics, visuals, and campaigns that leave a mark.
+                            From
                             concept to final cut, we craft stories that resonate.</p>
-    
+
                         <ul class="feature-list">
                             <li>
                                 <i class="fas fa-check-circle"></i>
@@ -4616,10 +4662,10 @@
                                 <span>Social media content</span>
                             </li>
                         </ul>
-    
+
                         <div class="card-footer">
                             <a href="#" class="card-link">See Our Work <i class="fas fa-arrow-right"></i></a>
-    
+
                             <div class="stat-highlight">
                                 <div class="stat-value" style="color: #4361ee; font-weight: 700;">3x</div>
                                 <div class="stat-label">More engagement</div>
@@ -4627,7 +4673,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Card 3: Digital Marketing & Performance Marketing -->
                 <div class="expertise-card" data-bg-image="images/marketing.png">
                     <div class="card-content">
@@ -4637,10 +4683,10 @@
                             </div>
                             <h3>Digital Marketing & Performance Marketing</h3>
                         </div>
-    
+
                         <p class="card-description">Targeted campaigns powered by Meta Ads & Google Ads to maximize ROI.
                             Data-driven strategies that deliver measurable results.</p>
-    
+
                         <ul class="feature-list">
                             <li>
                                 <i class="fas fa-check-circle"></i>
@@ -4655,10 +4701,10 @@
                                 <span>Performance analytics</span>
                             </li>
                         </ul>
-    
+
                         <div class="card-footer">
                             <a href="#" class="card-link">Get Strategy <i class="fas fa-arrow-right"></i></a>
-    
+
                             <div class="stat-highlight">
                                 <div class="stat-value" style="color: #4361ee; font-weight: 700;">+350%</div>
                                 <div class="stat-label">ROI increase</div>
@@ -4677,10 +4723,11 @@
             <div class="section-header">
                 <div class="section-tag">Client Stories</div>
                 <h2 class="section-title">What our <span class="highlight-text">clients</span> say</h2>
-                <p class="section-description">The Prime Byte team is fresh, passionate, and full of ideas. They don't just
+                <p class="section-description">The Prime Byte team is fresh, passionate, and full of ideas. They don't
+                    just
                     deliver services — they deliver impact that transforms businesses.</p>
             </div>
-    
+
             <!-- Main Testimonial (Full Width) -->
             <div class="testimonial-featured">
                 <div class="testimonial-quote-mark">
@@ -4695,7 +4742,8 @@
                     </svg>
                 </div>
                 <div class="testimonial-quote">
-                    "Working with The Prime Byte was a game-changer for our business. Their creative approach and technical
+                    "Working with The Prime Byte was a game-changer for our business. Their creative approach and
+                    technical
                     expertise delivered results beyond our expectations. Every byte truly counts with this team!"
                 </div>
                 <div class="featured-stars">
@@ -4714,12 +4762,13 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Sub Testimonials -->
             <div class="sub-testimonials">
                 <div class="sub-testimonial-item">
                     <div class="sub-testimonial-quote">
-                        "The Prime Byte transformed our website and doubled our conversion rate. Their attention to detail
+                        "The Prime Byte transformed our website and doubled our conversion rate. Their attention to
+                        detail
                         and creative vision is unmatched."
                     </div>
                     <div class="mini-stars">
@@ -4738,7 +4787,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="sub-testimonial-item">
                     <div class="sub-testimonial-quote">
                         "Their video content and digital campaigns increased our social engagement by 400%. The team
@@ -4760,10 +4809,11 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="sub-testimonial-item">
                     <div class="sub-testimonial-quote">
-                        "Professional, innovative, and results-driven. Our brand reach tripled within months of working with
+                        "Professional, innovative, and results-driven. Our brand reach tripled within months of working
+                        with
                         The Prime Byte team."
                     </div>
                     <div class="mini-stars">
@@ -4783,7 +4833,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Modern Metrics Section -->
             <div class="metrics-section">
                 <div class="metrics-container">
@@ -4798,9 +4848,9 @@
                         </div>
                         <div class="metric-label">Average client rating</div>
                     </div>
-    
+
                     <div class="metric-divider"></div>
-    
+
                     <div class="metric-card">
                         <div class="metric-value">25+</div>
                         <div class="icon-container">
@@ -4808,9 +4858,9 @@
                         </div>
                         <div class="metric-label">Happy clients</div>
                     </div>
-    
+
                     <div class="metric-divider"></div>
-    
+
                     <div class="metric-card">
                         <div class="metric-value">100%</div>
                         <div class="icon-container">
@@ -4837,7 +4887,8 @@
                 <div class="stats-card">
                     <div class="stats-value">+350%</div>
                     <div class="stats-label">ROI Increase</div>
-                    <p class="stats-description">Average return on investment improvement within 6 months for our digital
+                    <p class="stats-description">Average return on investment improvement within 6 months for our
+                        digital
                         marketing clients</p>
                     <!-- Added badge section with favicon -->
                     <div class="stats-badges">
@@ -4892,7 +4943,7 @@
                 <h2 class="section-title">They grew thanks to <span>our approach</span></h2>
                 <p class="section-description">Real results for real businesses</p>
             </div>
-    
+
             <div class="showcase-grid">
                 <!-- First Row: Card 1 content on left, Card 1 image on right -->
                 <div class="showcase-row">
@@ -4901,12 +4952,14 @@
                         <div class="card-content">
                             <div class="card-tag">Website Development</div>
                             <h3 class="card-title">KustomSigns<br>OK</h3>
-                            <p class="card-subtitle">From outdated website to modern responsive platform that converts</p>
-                            <a href="https://www.kustomsignsok.com/index.html#home" target="_blank" class="card-button first">View Website &nbsp;
+                            <p class="card-subtitle">From outdated website to modern responsive platform that converts
+                            </p>
+                            <a href="https://www.kustomsignsok.com/index.html#home" target="_blank"
+                                class="card-button first">View Website &nbsp;
                                 →</a>
                         </div>
                     </div>
-    
+
                     <!-- Card 1 Image -->
                     <div class="showcase-image-container">
                         <div class="museum-frame">
@@ -4916,7 +4969,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Second Row: Card 2 image on left, Card 2 content on right -->
                 <div class="showcase-row">
                     <!-- Card 2 Image -->
@@ -4927,20 +4980,22 @@
                             </div>
                         </div>
                     </div>
-                
+
                     <!-- Card 2 Content -->
                     <div class="showcase-card" data-bg-color="#fadadd">
                         <div class="card-content">
                             <div class="card-tag">Video Production</div>
                             <h3 class="card-title">Gouri De Ing Vanne</h3>
-                            <p class="card-subtitle">Meaningful storytelling that sparked 2.3M views and built a movement</p>
-                            <a href="https://youtu.be/23iOruwFS3A?si=Gpir1wSfiL-e1wNI" target="_blank" class="card-button first">Watch
+                            <p class="card-subtitle">Meaningful storytelling that sparked 2.3M views and built a
+                                movement</p>
+                            <a href="https://youtu.be/23iOruwFS3A?si=Gpir1wSfiL-e1wNI" target="_blank"
+                                class="card-button first">Watch
                                 Film &nbsp; →</a>
                             <!--<a href="/case-studies/bloom-cafe-storytelling" class="card-button second">View Case Study &nbsp; →</a>-->
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Third Row: Wide Card -->
                 <div class="showcase-wide-row">
                     <div class="showcase-card wide dark" data-bg-color="#0f1322">
@@ -4962,7 +5017,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="view-all-link">
                 <a href="#" class="btn btn-secondary">View All Projects <i class="fas fa-arrow-right btn-icon"></i></a>
             </div>
@@ -4990,7 +5045,8 @@
                             <span class="blog-tag">ux/ui</span>
                         </div>
                         <h3 class="blog-title">5 Website Design Trends That Actually Convert</h3>
-                        <p class="blog-description">Discover the design principles that turn visitors into customers. Learn
+                        <p class="blog-description">Discover the design principles that turn visitors into customers.
+                            Learn
                             which modern trends boost conversions and which ones to avoid.</p>
                         <div class="blog-meta">
                             <div class="blog-date">
@@ -5012,7 +5068,8 @@
                             <span class="blog-tag">engagement</span>
                         </div>
                         <h3 class="blog-title">The Art of Video Storytelling for Modern Brands</h3>
-                        <p class="blog-description">Master the techniques that make videos go viral and drive engagement.
+                        <p class="blog-description">Master the techniques that make videos go viral and drive
+                            engagement.
                             From concept to final cut, learn what makes compelling brand stories.</p>
                         <div class="blog-meta">
                             <div class="blog-date">
@@ -5034,7 +5091,8 @@
                             <span class="blog-tag">performance marketing</span>
                         </div>
                         <h3 class="blog-title">Meta Ads Optimization: 350% ROI in 90 Days</h3>
-                        <p class="blog-description">Step-by-step guide to scaling Meta Ads campaigns that actually generate
+                        <p class="blog-description">Step-by-step guide to scaling Meta Ads campaigns that actually
+                            generate
                             profit. Real strategies from our highest-performing campaigns.</p>
                         <div class="blog-meta">
                             <div class="blog-date">
@@ -5047,7 +5105,8 @@
                 </div>
             </div>
             <div class="view-all-link">
-                <a href="/blog" class="btn btn-secondary">View All Articles <i class="fas fa-arrow-right btn-icon"></i></a>
+                <a href="/blog" class="btn btn-secondary">View All Articles <i
+                        class="fas fa-arrow-right btn-icon"></i></a>
             </div>
         </div>
     </section>
@@ -5057,12 +5116,14 @@
         <div class="container">
             <div class="section-header text-center">
                 <div class="section-tag">Our Team</div>
-                <h2 class="section-title">Meet the <span class="gradient-text">creative minds</span> behind The Prime Byte
+                <h2 class="section-title">Meet the <span class="gradient-text">creative minds</span> behind The Prime
+                    Byte
                 </h2>
-                <p class="section-description">Five passionate individuals united by creativity, technology, and a shared
+                <p class="section-description">Five passionate individuals united by creativity, technology, and a
+                    shared
                     vision to craft digital experiences that inspire and drive results.</p>
             </div>
-    
+
             <div class="team-grid">
                 <!-- Team Member 1: Suhail -->
                 <div class="team-card">
@@ -5075,7 +5136,8 @@
                         <h3 class="team-name">Suhail</h3>
                         <div class="team-role">Website Designer/Developer</div>
                         <div class="team-social">
-                            <a href="https://www.linkedin.com/in/suhail-siyad-a12356230" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/suhail-siyad-a12356230" target="_blank"
+                                class="social-icon" aria-label="LinkedIn">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -5085,7 +5147,8 @@
                                     <circle cx="4" cy="4" r="2"></circle>
                                 </svg>
                             </a>
-                            <a href="https://github.com/Vulcan-byte-alt" target="_blank" class="social-icon" aria-label="GitHub">
+                            <a href="https://github.com/Vulcan-byte-alt" target="_blank" class="social-icon"
+                                aria-label="GitHub">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -5094,7 +5157,8 @@
                                 </svg>
                             </a>
                         </div>
-                        <p class="team-description">Crafts beautiful, responsive websites with precision. Expert in modern
+                        <p class="team-description">Crafts beautiful, responsive websites with precision. Expert in
+                            modern
                             web technologies and user experience design.</p>
                         <div class="team-skills">
                             <span class="skill-tag">HTML/CSS</span>
@@ -5105,7 +5169,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Team Member 2: Gokul -->
                 <div class="team-card">
                     <div class="team-card-header">
@@ -5136,7 +5200,8 @@
                                 </svg>
                             </a>
                         </div>
-                        <p class="team-description">Visual storyteller who brings brands to life through compelling graphics
+                        <p class="team-description">Visual storyteller who brings brands to life through compelling
+                            graphics
                             and video content that captures attention.</p>
                         <div class="team-skills">
                             <span class="skill-tag">DaVinci Resolve</span>
@@ -5147,7 +5212,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Team Member 3: Akshay -->
                 <div class="team-card">
                     <div class="team-card-header">
@@ -5189,7 +5254,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Team Member 4: Vishal -->
                 <div class="team-card">
                     <div class="team-card-header">
@@ -5218,7 +5283,8 @@
                                 </svg>
                             </a>
                         </div>
-                        <p class="team-description">Data-driven strategist who maximizes ROI through targeted campaigns and
+                        <p class="team-description">Data-driven strategist who maximizes ROI through targeted campaigns
+                            and
                             performance optimization.</p>
                         <div class="team-skills">
                             <span class="skill-tag">Meta Ads</span>
@@ -5228,7 +5294,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Team Member 5: Ambady -->
                 <div class="team-card">
                     <div class="team-card-header">
@@ -5253,7 +5319,8 @@
                             <a href="#" class="social-icon" aria-label="Email">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
                                     </path>
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
@@ -5272,7 +5339,7 @@
             </div>
         </div>
     </section>
-    
+
     <style>
         /* Team Section Styles */
         .team-section {
@@ -5281,7 +5348,7 @@
             position: relative;
             overflow: hidden;
         }
-    
+
         .team-section::before {
             content: '';
             position: absolute;
@@ -5294,17 +5361,17 @@
                 radial-gradient(circle at 80% 70%, rgba(247, 37, 133, 0.05) 0%, transparent 70%);
             pointer-events: none;
         }
-    
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-    
+
         .section-header {
             margin-bottom: 60px;
         }
-    
+
         .section-tag {
             display: inline-block;
             padding: 8px 16px;
@@ -5315,7 +5382,7 @@
             font-weight: 600;
             margin-bottom: 16px;
         }
-    
+
         .section-title {
             font-size: 48px;
             font-weight: 700;
@@ -5323,14 +5390,14 @@
             margin-bottom: 16px;
             font-family: 'Space Grotesk', sans-serif;
         }
-    
+
         .gradient-text {
             background: linear-gradient(135deg, #4361ee 0%, #6366f1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-    
+
         .section-description {
             font-size: 18px;
             color: #64748b;
@@ -5338,14 +5405,14 @@
             margin: 0 auto;
             line-height: 1.6;
         }
-    
+
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 60px;
         }
-    
+
         .team-card {
             background: white;
             border-radius: 20px;
@@ -5357,13 +5424,13 @@
             position: relative;
             overflow: hidden;
         }
-    
+
         .team-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
             border-color: rgba(67, 97, 238, 0.3);
         }
-    
+
         .team-card::before {
             content: '';
             position: absolute;
@@ -5376,15 +5443,15 @@
             transform-origin: left;
             transition: transform 0.3s ease;
         }
-    
+
         .team-card:hover::before {
             transform: scaleX(1);
         }
-    
+
         .team-card-header {
             margin-bottom: 24px;
         }
-    
+
         .team-avatar {
             position: relative;
             width: 120px;
@@ -5395,19 +5462,19 @@
             box-shadow: 0 8px 25px rgba(67, 97, 238, 0.2);
             transition: all 0.3s ease;
         }
-    
+
         .team-avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
-    
+
         .team-card:hover .team-avatar {
             transform: scale(1.05);
             box-shadow: 0 15px 35px rgba(67, 97, 238, 0.3);
         }
-    
+
         .team-name {
             font-size: 24px;
             font-weight: 700;
@@ -5415,7 +5482,7 @@
             margin-bottom: 8px;
             font-family: 'Space Grotesk', sans-serif;
         }
-    
+
         .team-role {
             color: #4361ee;
             font-size: 16px;
@@ -5423,14 +5490,14 @@
             margin-bottom: 16px;
             font-family: 'Space Grotesk', sans-serif;
         }
-    
+
         .team-social {
             display: flex;
             justify-content: center;
             gap: 12px;
             margin-bottom: 20px;
         }
-    
+
         .social-icon {
             width: 36px;
             height: 36px;
@@ -5444,28 +5511,28 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(67, 97, 238, 0.2);
         }
-    
+
         .social-icon:hover {
             background: #4361ee;
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
         }
-    
+
         .team-description {
             color: #64748b;
             line-height: 1.6;
             margin-bottom: 20px;
             font-size: 14px;
         }
-    
+
         .team-skills {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             justify-content: center;
         }
-    
+
         .skill-tag {
             padding: 4px 12px;
             background: rgba(67, 97, 238, 0.1);
@@ -5475,27 +5542,27 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-    
+
         .team-card:hover .skill-tag {
             background: rgba(67, 97, 238, 0.15);
             transform: translateY(-2px);
         }
-    
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .section-title {
                 font-size: 36px;
             }
-    
+
             .team-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
-    
+
             .team-card {
                 padding: 24px;
             }
-    
+
             .team-avatar {
                 width: 100px;
                 height: 100px;
@@ -5511,9 +5578,10 @@
             <div class="section-header">
                 <div class="section-tag">Our Process</div>
                 <h2 class="section-title">How we <span>bring ideas</span> to life</h2>
-                <p class="section-description">Our proven methodology ensures every project delivers exceptional results</p>
+                <p class="section-description">Our proven methodology ensures every project delivers exceptional results
+                </p>
             </div>
-    
+
             <div class="process-grid">
                 <!-- Process Step 1 -->
                 <div class="process-card" style="background-image: url('images/how1.png');">
@@ -5524,21 +5592,21 @@
                                 <i class="fas fa-lightbulb"></i>
                             </div>
                         </div>
-    
+
                         <h3 class="process-title">Discovery & Strategy</h3>
                         <p class="process-description">We dive deep into your brand, audience, and goals to create a
                             comprehensive strategy that sets the foundation for success.</p>
-    
+
                         <div class="process-features">
                             <span class="process-feature">Brand Analysis</span>
                             <span class="process-feature">Market Research</span>
                             <span class="process-feature">Goal Setting</span>
                         </div>
-    
+
                         <div class="process-duration">2-3 Days</div>
                     </div>
                 </div>
-    
+
                 <!-- Process Step 2 -->
                 <div class="process-card" style="background-image: url('images/how2.png');">
                     <div class="process-overlay">
@@ -5548,21 +5616,22 @@
                                 <i class="fas fa-drafting-compass"></i>
                             </div>
                         </div>
-    
+
                         <h3 class="process-title">Design & Development</h3>
-                        <p class="process-description">Our creative team brings your vision to life with stunning designs,
+                        <p class="process-description">Our creative team brings your vision to life with stunning
+                            designs,
                             compelling content, and cutting-edge development.</p>
-    
+
                         <div class="process-features">
                             <span class="process-feature">Creative Design</span>
                             <span class="process-feature">Content Creation</span>
                             <span class="process-feature">Development</span>
                         </div>
-    
+
                         <div class="process-duration">1-2 Weeks</div>
                     </div>
                 </div>
-    
+
                 <!-- Process Step 3 -->
                 <div class="process-card" style="background-image: url('images/how3.png');">
                     <div class="process-overlay">
@@ -5572,25 +5641,25 @@
                                 <i class="fas fa-rocket"></i>
                             </div>
                         </div>
-    
+
                         <h3 class="process-title">Launch & Optimize</h3>
                         <p class="process-description">We launch your project with precision and continuously optimize
                             performance to maximize results and ROI.</p>
-    
+
                         <div class="process-features">
                             <span class="process-feature">Launch Strategy</span>
                             <span class="process-feature">Performance Tracking</span>
                             <span class="process-feature">Optimization</span>
                         </div>
-    
+
                         <div class="process-duration">Ongoing</div>
                     </div>
                 </div>
             </div>
-    
+
         </div>
     </section>
-    
+
     <style>
         /* Process Section Styles */
         .process {
@@ -5598,7 +5667,7 @@
             position: relative;
             overflow: hidden;
         }
-    
+
         .process::before {
             content: '';
             position: absolute;
@@ -5611,14 +5680,14 @@
                 radial-gradient(circle at 80% 70%, rgba(247, 37, 133, 0.05) 0%, transparent 70%);
             pointer-events: none;
         }
-    
+
         .process-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-top: 60px;
         }
-    
+
         .process-card {
             background-size: cover;
             background-position: center;
@@ -5632,7 +5701,7 @@
             display: flex;
             flex-direction: column;
         }
-    
+
         .process-overlay {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0.6) 100%);
             padding: 30px;
@@ -5642,7 +5711,7 @@
             color: white;
             position: relative;
         }
-    
+
         .process-overlay::before {
             content: '';
             position: absolute;
@@ -5650,12 +5719,12 @@
             background: linear-gradient(135deg, rgba(67, 97, 238, 0.15) 0%, rgba(247, 37, 133, 0.15) 100%);
             z-index: -1;
         }
-    
+
         .process-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
         }
-    
+
         .process-header {
             display: flex;
             justify-content: space-between;
@@ -5663,7 +5732,7 @@
             margin-bottom: 20px;
             flex-shrink: 0;
         }
-    
+
         .process-number {
             font-size: 48px;
             font-weight: 800;
@@ -5671,7 +5740,7 @@
             font-family: 'Space Grotesk', sans-serif;
             line-height: 1;
         }
-    
+
         .process-icon {
             width: 60px;
             height: 60px;
@@ -5685,12 +5754,12 @@
             font-size: 24px;
             transition: all 0.3s ease;
         }
-    
+
         .process-card:hover .process-icon {
             background: linear-gradient(135deg, #4361ee 0%, #6366f1 100%);
             transform: scale(1.1);
         }
-    
+
         .process-title {
             font-size: 24px;
             font-weight: 700;
@@ -5699,7 +5768,7 @@
             flex-shrink: 0;
             font-family: 'Space Grotesk', sans-serif;
         }
-    
+
         .process-description {
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 24px;
@@ -5708,7 +5777,7 @@
             flex: 1;
             min-height: 80px;
         }
-    
+
         .process-features {
             display: flex;
             gap: 8px;
@@ -5716,7 +5785,7 @@
             flex-wrap: wrap;
             flex-shrink: 0;
         }
-    
+
         .process-feature {
             padding: 4px 12px;
             background: rgba(255, 255, 255, 0.2);
@@ -5726,7 +5795,7 @@
             font-weight: 500;
             color: white;
         }
-    
+
         .process-duration {
             margin-top: auto;
             flex-shrink: 0;
@@ -5738,36 +5807,36 @@
             font-size: 16px;
             font-family: 'Space Grotesk', sans-serif;
         }
-    
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .process-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-    
+
             .process-card {
                 height: auto;
                 min-height: 400px;
             }
-    
+
             .process-overlay {
                 padding: 24px;
             }
-    
+
             .process-number {
                 font-size: 36px;
             }
-    
+
             .process-title {
                 font-size: 20px;
             }
         }
     </style>
 
-   
 
-    
+
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact section-light">
@@ -5828,7 +5897,7 @@
                             </a>
                         </div>
                     </div>
-    
+
                     <!-- Clean, elegant map integration -->
                     <div class="map-container">
                         <iframe
@@ -5865,17 +5934,18 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer section-dark">
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <a href="#" class="footer-logo flex items-center">
-                <img src="images/logo.jpg" alt="The PrimeByte" />
-            </a>
+                        <img src="images/logo.jpg" alt="The PrimeByte" />
+                    </a>
                     <p class="footer-description">
-                        At The Prime Byte, digital marketing is more than just business — it's our passion. We believe every
+                        At The Prime Byte, digital marketing is more than just business — it's our passion. We believe
+                        every
                         brand has a story worth telling, and we're here to help you tell yours.
                     </p>
                     <div class="social-links">
@@ -5944,10 +6014,10 @@
             </div>
         </div>
     </footer>
-    
-    
 
-    
+
+
+
 
     <!-- JavaScript - Modified for better mobile performance -->
     <script>
@@ -6091,7 +6161,7 @@
                 }
             }, 100);
 
-            
+
 
             // Initialize all other features
             initializeAnimations();
